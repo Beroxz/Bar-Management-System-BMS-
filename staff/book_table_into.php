@@ -93,15 +93,6 @@
   <script>
     $(function () {
     $(".datatable").DataTable();
-    // $('#example2').DataTable({
-    //   "paging": true,
-    //   "lengthChange": false,
-    //   "searching": false,
-    //   "ordering": true,
-    //   "info": true,
-  vscode-file://vscode-app/c:/Users/kitti/AppData/Local/Programs/Microsoft%20VS%20Code/resources/app/out/vs/code/electron-sandbox/workbench/workbench.html //   "autoWidth": false,
-    // http://fordev22.com/
-    // });
     });
   </script>
 
@@ -116,4 +107,3 @@
   
 </body>
 </html>
-<!-- http://fordev22.com/ -->

@@ -1,11 +1,8 @@
 <?php
-//เรียกใช้งานไฟล์เชื่อมต่อฐานข้อมูล
 require_once 'condb.php';
-//query
 $query = "SELECT * FROM tbl_table WHERE table_id = $_GET[id]";
 $result = mysqli_query($condb, $query);
 $row = mysqli_fetch_array($result);
-//print_r($row);
 ?>
 <!doctype html>
 <html lang="en">

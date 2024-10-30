@@ -5,7 +5,7 @@
 <section class="content-header">
   <div class="container-fluid">
     <h1>รายงานการสั่งซื้อ</h1>
-    </div><!-- /.container-fluid -->
+    </div>
   </section>
   <!-- Main content -->
   <section class="content">
@@ -41,9 +41,6 @@
       
     </div>
     
-    
-    
-    
   </section>
   <!-- /.content -->
   
@@ -52,18 +49,8 @@
   <script>
   $(function () {
   $(".datatable").DataTable();
-  // $('#example2').DataTable({
-  //   "paging": true,
-  //   "lengthChange": false,
-  //   "searching": false,
-  //   "ordering": true,
-  //   "info": true,
-  //   "autoWidth": false,
-  // http://fordev22.com/
-  // });
   });
   </script>
   
 </body>
 </html>
-<!-- http://fordev22.com/ -->

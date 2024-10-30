@@ -6,7 +6,6 @@ require_once 'condb.php';
 
 if (isset($_POST['table_id']) && isset($_POST['booking_name']) && isset($_POST['booking_date'])) {
 	
-
 //ประกาศตัวแปรรับค่าจากฟอร์ม
 
 $booking_name = $_POST['booking_name'];
@@ -23,7 +22,6 @@ $sqlInsertBooking	= "INSERT INTO  tbl_booking values(null, '$table_id', '$bookin
 $rsInsertBooking	= mysqli_query($condb, $sqlInsertBooking);
  
 //การใช้ Transection ประกอบด้วย  BEGIN COMMIT ROLLBACK 
-
 
 //update table status
 $sqlUpdate ="UPDATE tbl_table SET table_status=1 WHERE table_id = $table_id"; //1=จอง

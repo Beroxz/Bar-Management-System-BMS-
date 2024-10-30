@@ -53,9 +53,9 @@
       <td width="1%" >#</td>
       
       <td width="20%" >สินค้า</td>
-      <td width="4%" >ราคา</td>
+      <td width="3%" >ราคา</td>
       <td width="15%" >จำนวน</td>
-      <td width="4%" >รวม(บาท)</td>
+      <td width="3%" >รวม(บาท)</td>
       <td width="3%" >ลบ</td>
     </tr>
 <?php
@@ -74,15 +74,7 @@ if(!empty($_SESSION['cart']))
 		echo "<tr>";
 		echo "<td>" . $ii+=1 . "</td>";
 		
-		echo "<td>" 
-
-		. $row["p_name"] 
-		."<br>"
-		."สต๊อก "
-		.$row['p_qty']
-		." รายการ"
-
-		. "</td>";
+		echo "<td>" . $row["p_name"] . "</td>";
 		echo "<td align='right'>" .number_format($row["p_price"],2) . "</td>";
 		echo "<td align='right'>"; 
 

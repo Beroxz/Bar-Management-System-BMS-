@@ -11,11 +11,6 @@ $query_member = "SELECT * FROM tbl_member WHERE mem_id = $mem_id"
 or die("Error : ".mysqlierror($query_member));
 $rs_member = mysqli_query($condb, $query_member);
 $row=mysqli_fetch_array($rs_member);
-//echo $row['mem_name'];
-//echo ($query_member);//test query
-
-
-
 
 ?>
 <script src="http://code.jquery.com/jquery-latest.js"></script>
@@ -33,15 +28,12 @@ $row=mysqli_fetch_array($rs_member);
         }
 </script>
 
-
     <!-- Content Header (Page header) -->
     <section class="content-header">
       <div class="container-fluid">
         <h1>Profile</h1>
       </div><!-- /.container-fluid -->
     </section>
-
-
 
     <!-- Main content -->
     <section class="content">
@@ -62,9 +54,6 @@ $row=mysqli_fetch_array($rs_member);
                     <input type="hidden" name="mem_id" value="<?php echo $row['mem_id'];?>">
 
                     <input type="hidden" name="mem_level" value="<?php echo $row['mem_level'];?>">
-
-                  
-
 
                   <div class="form-group row">
                     <label for="" class="col-sm-2 col-form-label">ชื่อ </label>
@@ -135,7 +124,6 @@ $row=mysqli_fetch_array($rs_member);
 
     </div>
 
-
     </section>
     <!-- /.content -->
 
@@ -146,20 +134,8 @@ $row=mysqli_fetch_array($rs_member);
 <script>
   $(function () {
     $(".datatable").DataTable();
-    // $('#example2').DataTable({
-    //   "paging": true,
-    //   "lengthChange": false,
-    //   "searching": false,
-    //   "ordering": true,
-    //   "info": true,
-    //   "autoWidth": false,
-    // http://fordev22.com/
-    // });
   });
 </script>
   
 </body>
 </html>
-
-
-<!-- http://fordev22.com/ -->

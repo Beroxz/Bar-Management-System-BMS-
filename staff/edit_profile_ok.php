@@ -1,12 +1,5 @@
 <?php
 include('../condb.php');
-// echo "<pre>";
-// print_r($_POST);
-// print_r($_FILES);
-// echo "</pre>";
-// $member = $_POST['member'];
-// echo $member;
-// exit();
 $mem_id = mysqli_real_escape_string($condb,$_POST["mem_id"]);
 	$mem_level = mysqli_real_escape_string($condb,$_POST["mem_level"]);
 	
@@ -55,7 +48,5 @@ $mem_id = mysqli_real_escape_string($condb,$_POST["mem_id"]);
 	echo "window.location = 'edit_profile.php?mem_id=$mem_id&&mem_editp_error=mem_editp_error'; ";
 	echo "</script>";
 	}
-
-
 
 ?>

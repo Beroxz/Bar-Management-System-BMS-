@@ -151,6 +151,21 @@ if (isset($_GET['booking']) && $_GET['booking']=="del"){
   echo "</script>";
 
 
+}elseif (isset($_GET['booking']) && $_GET['booking']=="confirm"){	
+
+  $table_id  = mysqli_real_escape_string($condb,$_GET["table_id"]);
+	$sql_del = "UPDATE tbl_table SET table_status = '2' WHERE table_id=$table_id";
+	$result_del = mysqli_query($condb, $sql_del) or die ("Error in query: $sql_del ". mysqli_error());
+
+  $sql_del2 = "UPDATE tbl_booking SET table_id = '2' WHERE table_id=$table_id";
+	$result_del2 = mysqli_query($condb, $sql_del2) or die ("Error in query: $sql_del2 ". mysqli_error());	
+	mysqli_close($condb);
+  
+  echo "<script type ='text/javascript'>";
+  echo "window.location = 'index.php?book_cancel=book_cancel';";
+  echo "</script>";
+
+
 }else{
 
   echo "<script type ='text/javascript'>";

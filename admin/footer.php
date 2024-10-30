@@ -1,25 +1,18 @@
 </div>
-  <!-- /.content-wrapper -->
 
   <footer class="main-footer">
     <div class="float-right d-none d-sm-block">
-      <b></b> 
+      <b>Version</b> 1.0.0
     </div>
-    <strong> </strong> 
+    <strong>Copyright &copy; 2023 BarCode-POS System
   </footer>
 
-  <!-- Control Sidebar -->
   <aside class="control-sidebar control-sidebar-dark">
     <!-- Control sidebar content goes here -->
   </aside>
-  <!-- /.control-sidebar -->
 </div>
-<!-- ./wrapper -->
 
 <!-- jQuery -->
-
-
-
 <script src="../assets/jquery.min.js"></script>
 <!-- Bootstrap 4 -->
 <script src="../assets/bootstrap.bundle.min.js"></script>
@@ -38,15 +31,10 @@
 <!-- AdminLTE App -->
 <script src="../assets/demo.js"></script>
 <!-- AdminLTE for demo purposes -->
-<!-- <script src="assets/dist/js/demo.js"></script> -->
-<!-- http://fordev22.com/ -->
 
 
 <script>
   $(document).ready(function () {
-    //$('.sidebar-menu').tree();
-    //$('.select2').select2();
-    //Initialize Select2 Elements
     $('.select2').select2({
       theme: 'bootstrap4'
     })
@@ -56,8 +44,6 @@
 <script>
 $(function() {
 
-    // cb(start, end);
-    // $('#createContactModal').modal('show')
     $('#example1').DataTable({
         "order": [
             [0, "desc"]
@@ -68,8 +54,6 @@ $(function() {
         ],
 
     });
-
-    
 
 });
 </script>

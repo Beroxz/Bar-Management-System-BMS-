@@ -74,15 +74,13 @@ body  {
         <div class="social-auth-links text-center mb-3">
           <button type="submit" class="btn btn-primary btn-block">Login</button>
           <!-- <a href="#" class="btn btn-block btn-danger">
-            <i class="fab fa-google-plus mr-2"></i> พนักงานขับรถ
+            <i class="fab fa-google-plus mr-2"></i> พนักงาน
           </a> -->
         </div>
       </form>
-
       
       <!-- /.social-auth-links -->
 
-      
     </div>
     <!-- /.login-card-body -->
 
@@ -91,15 +89,11 @@ body  {
 </div>
 <!-- /.login-box -->
 
-
-
 </body>
-
 
 <!-- jQuery -->
 <script src="assets/jquery.min.js"></script>
 <!-- Bootstrap 4 -->
 <script src="assets/bootstrap.bundle.min.js"></script>
-
 
 </html>

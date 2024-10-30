@@ -64,10 +64,6 @@ if($m_level != 1 AND $m_level != 2){
 }
 
 include('../condb.php')
-
-
-
-
 //clear session
 //unset($_SESSION['mem_name']);//clear session บางตัว
 // session_destroy();

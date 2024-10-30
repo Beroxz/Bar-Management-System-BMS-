@@ -34,7 +34,7 @@ $row = mysqli_fetch_array($result);
       </div>
       <br>
       <div class="card-body">
-      <form action="cart.php?t_name=<?php echo $row_table['table_name']; ?>" method="POST">
+      <form action="new_table_sale.php?id=<?php echo $table_id; ?>&&booking=confirm" method="POST">
             <div class="form-group row">
               <label for="" class="col-sm-2 col-form-label">เลขโต๊ะ </label>
               <div class="col-sm-10">
@@ -72,7 +72,7 @@ $row = mysqli_fetch_array($result);
         <div class="modal-footer">
           <a href="index.php" class="btn btn-secondary">ปิด</a>
           <a href="booking_db.php?table_id=<?php echo $row_table['table_id']; ?>&&booking=del" class="del-btn btn btn-danger" onclick="return confirm('ต้องการลบข้อมูลนี้ใช่หรือไม่')">ยกเลิกการจอง</a>
-          <button type="submit" class="btn btn-success"> สั่งอาหาร</button>
+          <button type="submit" class="btn btn-primary"> รับโต๊ะ </button>
         </div>
     </form>
     </div>
@@ -92,15 +92,6 @@ $row = mysqli_fetch_array($result);
   <script>
     $(function () {
     $(".datatable").DataTable();
-    // $('#example2').DataTable({
-    //   "paging": true,
-    //   "lengthChange": false,
-    //   "searching": false,
-    //   "ordering": true,
-    //   "info": true,
-    //   "autoWidth": false,
-    // http://fordev22.com/
-    // });
     });
   </script>
 

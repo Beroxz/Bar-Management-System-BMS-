@@ -4,18 +4,15 @@
 
 <?php
 
-$query_my_order = "SELECT p.p_name, SUM(o.total) AS totol
-FROM tbl_order_detail as o
-INNER JOIN tbl_product as p ON p.p_id=o.p_id
-INNER JOIN tbl_order as ord ON ord.order_id=o.order_id
-WHERE ord.order_status = 4
-GROUP BY o.p_id ORDER BY  totol DESC LIMIT 5
+$query = "SELECT SUM(pay_amount) AS totol,
+DATE_FORMAT(order_date, '%M-%Y') AS o_dttm
+FROM tbl_order WHERE order_status IN (2,4)
+GROUP BY DATE_FORMAT(order_date, '%Y-%m')
+ORDER BY DATE_FORMAT(order_date, '%Y') DESC
 "
 or die
-("Error : ".mysqlierror($query_my_order));
-$rs_my_order = mysqli_query($condb, $query_my_order);
-//echo ($query_my_order);//test query
-//exit();
+("Error : ".mysqlierror($query));
+$rs_query = mysqli_query($condb, $query);
 ?>
 
 <!-- CDN เชื่อมต่อ chart -->
@@ -31,7 +28,7 @@ $rs_my_order = mysqli_query($condb, $query_my_order);
       <span class="hidden-xs">รายงาน | Dashboard </span>
   </h1>
     
-    </div><!-- /.container-fluid -->
+    </div>
   </section>
   <!-- Main content -->
   <section class="content">
@@ -53,16 +50,16 @@ $rs_my_order = mysqli_query($condb, $query_my_order);
               <thead>
                 <tr>
                   
-                  <th>ชื่อสินค้า</th>
+                  <th>เดือน</th>
                   <th>จำนวนยอดขาย</th>
                   
                 </tr>
               </thead>
               <tbody>
                 <?php
-                foreach($rs_my_order as $rs_order){
+                foreach($rs_query as $rs_order){
                 echo"<tr>";
-                  echo "<td>".$rs_order['p_name']."</td>";
+                  echo "<td>".$rs_order['o_dttm']."</td>";
                   echo "<td>".$rs_order['totol']."</td>"; 
 
                 echo"</tr>";
@@ -103,7 +100,7 @@ chart: {
 type: 'column', 
 },
 title: {
-text: 'รายงานภาพรวมยอดขาย 5 อันดับแรก ที่ขายดี',
+text: 'สรุปยอดขายรายเดือน',
 style: {
 
 }
@@ -132,7 +129,7 @@ font: '11px Trebuchet MS, Verdana, sans-serif'
 }
 },
 title: {
-text: 'สินค้า',
+text: 'เดือน',
 style: {
 
 fontWeight: 'bold',
@@ -181,18 +178,8 @@ this.point.y + ' ' + this.point.name.toLowerCase();
 <script>
 $(function () {
 $(".datatable").DataTable();
-// $('#example2').DataTable({
-//   "paging": true,
-//   "lengthChange": false,
-//   "searching": false,
-//   "ordering": true,
-//   "info": true,
-//   "autoWidth": false,
-// http://fordev22.com/
-// });
 });
 </script>
 
 </body>
 </html>
-<!-- http://fordev22.com/ -->

@@ -65,9 +65,6 @@ $rs_type = mysqli_query($condb, $query_type);
                 <?php }?>
               </tbody>
             </table>
-            
-            
-            
           </div>
           
         </div>
@@ -77,10 +74,7 @@ $rs_type = mysqli_query($condb, $query_type);
       </div>
       
     </div>
-    
-    
-    
-    
+ 
 </section>
   <!-- /.content -->
 
@@ -102,11 +96,8 @@ $rs_type = mysqli_query($condb, $query_type);
               <div class="col-sm-10">
                 <input type="text" name="type_name" class="form-control" id="type_name" placeholder="" value="">
               </div>
-            </div>
-            
-          </span>
-          
-          
+            </div>            
+          </span>  
         </div>
         <div class="modal-footer">
           <button type="button" class="btn btn-secondary" data-dismiss="modal">ปิด</button>
@@ -121,18 +112,8 @@ $rs_type = mysqli_query($condb, $query_type);
 <script>
 $(function () {
 $(".datatable").DataTable();
-// $('#example2').DataTable({
-//   "paging": true,
-//   "lengthChange": false,
-//   "searching": false,
-//   "ordering": true,
-//   "info": true,
-//   "autoWidth": false,
-// http://fordev22.com/
-// });
 });
 </script>
 
 </body>
 </html>
-<!-- http://fordev22.com/ -->

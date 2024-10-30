@@ -15,8 +15,6 @@ if (@$_SESSION['mem_id'] == ''){
 }
 ?>
 
-
-
 <!--สร้างตัวแปรสำหรับบันทึกการสั่งซื้อ -->
 <?php
 	$mem_id = $_REQUEST["mem_id"];
@@ -31,10 +29,6 @@ if (@$_SESSION['mem_id'] == ''){
 	$pay_amount2 = $_REQUEST["pay_amount2"];//ยอดเงินที่ต้องจ่าย
 	
 	$order_date = Date("Y-m-d G:i:s");
-
-	
-
-	
 
 	//บันทึกการสั่งซื้อลงใน order
 	mysqli_query($condb, "BEGIN"); 
@@ -58,7 +52,6 @@ if (@$_SESSION['mem_id'] == ''){
 	$query1	= mysqli_query($condb, $sql1)
 	or die ("Error : ".mysqlierror($sql1));
 
-
 	//ฟังก์ชั่น MAX() จะคืนค่าที่มากที่สุดในคอลัมน์ที่ระบุ ออกมา หรือจะพูดง่ายๆก็ว่า ใช้สำหรับหาค่าที่มากที่สุด นั่นเอง.
 	$sql2 = "SELECT MAX(order_id) as order_id 
 	FROM tbl_order 
@@ -79,8 +72,7 @@ if (@$_SESSION['mem_id'] == ''){
 		$total	= $row3['p_price']*$qty;
 
 		$count=mysqli_num_rows($query3);//นับว่ามีการqueryได้ไหม
-
-		
+	
 		$sql4	= "INSERT INTO tbl_order_detail 
 				   VALUES (null,
 				   '$order_id', 
@@ -106,7 +98,6 @@ if (@$_SESSION['mem_id'] == ''){
             
             echo "ยอดคงเหลือ".$stc;
             echo "<hr>";
-  
   
             }
       

@@ -1,20 +1,9 @@
-<!-- Main Sidebar Container -->
-<!-- http://fordev22.com/ -->
-<aside class="main-sidebar sidebar-dark-gray elevation-4">
-    <!-- Brand Logo -->
-    <!-- <a href="" class="brand-link bg-gray">
-      <img src="../assets/img/FD22.png"
-           alt="AdminLTE Logo"
-           class="brand-image img-circle elevation-3"
-           style="opacity: .8">
-      <span class="brand-text font-weight-light">FD22 | POS System</span>
-    </a> -->
 
+<aside class="main-sidebar sidebar-dark-gray elevation-4">
 
     <a href="">
       <span class="brand-link bg-gray" style="text-align: center; font-weight: 700; font-size: 20px;">Admin</span>
     </a>
-
     <!-- Sidebar -->
     <div class="sidebar">
       <!-- Sidebar user (optional) -->
@@ -26,9 +15,6 @@
           <a href="edit_profile.php" target="" class="d-block"> <?php echo $_SESSION['mem_name'];?> | Edit Profile</a>
         </div>
       </div>
-
-
-
         <!-- Sidebar Menu -->
       <nav class="mt-2">
         <!-- nav-compact -->
@@ -39,8 +25,15 @@
 
           <li class="nav-item">
             <a href="index.php" class="nav-link <?php if($menu=="index"){echo "active";} ?> ">
-              <i class="nav-icon fa fa-database"></i>
+              <i class="nav-icon fa fa-indent"></i>
               <p>ยอดขายรายเดือน</p>
+            </a>
+          </li>
+
+          <li class="nav-item">
+            <a href="report_date.php" class="nav-link <?php if($menu=="report"){echo "active";} ?> ">
+              <i class="nav-icon fa fa-database"></i>
+              <p>ยอดขายรายวัน</p>
             </a>
           </li>
 
@@ -104,7 +97,6 @@
         </ul>
       </nav>
       <!-- /.sidebar-menu -->
-      <!-- http://fordev22.com/ -->
     </div>
     <!-- /.sidebar -->
   </aside>

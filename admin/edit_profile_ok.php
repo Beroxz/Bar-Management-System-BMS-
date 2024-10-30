@@ -1,12 +1,6 @@
 <?php
 include('../condb.php');
-// echo "<pre>";
-// print_r($_POST);
-// print_r($_FILES);
-// echo "</pre>";
-// $member = $_POST['member'];
-// echo $member;
-// exit();
+
 $mem_id = mysqli_real_escape_string($condb,$_POST["mem_id"]);
 	$mem_level = mysqli_real_escape_string($condb,$_POST["mem_level"]);
 	

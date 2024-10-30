@@ -12,12 +12,10 @@
   <!-- Favicon-->
   <link rel="shortcut icon" href="../assets/img/favicon.png">
   <!-- Font Awesome -->
- <!--  http://fordev22.com/ -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
   <!-- Ionicons -->
   <link rel="stylesheet" href="https://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css">
     <!-- iCheck for checkboxes and radio inputs -->
-    <!-- http://fordev22.com/ -->
   <link rel="stylesheet" href="../assets/icheck-bootstrap.min.css">
   <!-- DataTables -->
 
@@ -67,9 +65,6 @@ if($m_level != 1 AND $m_level != 2){
 }
 
 include('../condb.php')
-
-
-
 
 //clear session
 //unset($_SESSION['mem_name']);//clear session บางตัว

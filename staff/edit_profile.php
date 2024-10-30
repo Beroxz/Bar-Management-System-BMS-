@@ -1,6 +1,4 @@
-<?php 
-$menu = ""
-?>
+
 <?php include("header.php"); ?>
 
 <?php 
@@ -13,9 +11,6 @@ $rs_member = mysqli_query($condb, $query_member);
 $row=mysqli_fetch_array($rs_member);
 //echo $row['mem_name'];
 //echo ($query_member);//test query
-
-
-
 
 ?>
 <script src="http://code.jquery.com/jquery-latest.js"></script>
@@ -141,20 +136,8 @@ $row=mysqli_fetch_array($rs_member);
 <script>
   $(function () {
     $(".datatable").DataTable();
-    // $('#example2').DataTable({
-    //   "paging": true,
-    //   "lengthChange": false,
-    //   "searching": false,
-    //   "ordering": true,
-    //   "info": true,
-    //   "autoWidth": false,
-    // http://fordev22.com/
-    // });
   });
 </script>
   
 </body>
 </html>
-
-
-<!-- http://fordev22.com/ -->
