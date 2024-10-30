@@ -44,7 +44,7 @@
 
 ?>
 
-<form id="frmcart" name="frmcart" method="post" action="?b_id=<?php echo $b_id;?>=1&act=update">
+<form id="frmcart" name="frmcart" method="post" action="?t_id=<?php echo $t_id;?>&b_id=<?php echo $b_id;?>=1&act=update">
 	<h4>รายการสั่งซื้อหน้าร้าน</h4>
 	<br>
   <table border="0" align="center" class="table table-hover table-bordered table-striped">
@@ -53,9 +53,9 @@
       <td width="1%" >#</td>
       
       <td width="20%" >สินค้า</td>
-      <td width="3%" >ราคา</td>
+      <td width="4%" >ราคา</td>
       <td width="15%" >จำนวน</td>
-      <td width="3%" >รวม(บาท)</td>
+      <td width="4%" >รวม(บาท)</td>
       <td width="3%" >ลบ</td>
     </tr>
 <?php
@@ -74,7 +74,15 @@ if(!empty($_SESSION['cart']))
 		echo "<tr>";
 		echo "<td>" . $ii+=1 . "</td>";
 		
-		echo "<td>" . $row["p_name"] . "</td>";
+		echo "<td>" 
+
+		. $row["p_name"] 
+		."<br>"
+		."สต๊อก "
+		.$row['p_qty']
+		." รายการ"
+
+		. "</td>";
 		echo "<td align='right'>" .number_format($row["p_price"],2) . "</td>";
 		echo "<td align='right'>"; 
 
@@ -113,9 +121,7 @@ if(!empty($_SESSION['cart']))
 
 	<input type="button" name="btcancel" id="buttonu" value="ยกเลิกออเดอร์" class="btn btn-danger" onclick="window.location='list_l.php?act=cancel';" />
 	<input type="submit" name="buttonu" id="buttonu" value="อัพเดตรายการ" class="btn btn-warning" />
-    <?php if($act=='update'){ ?>
-		<input type="button" name="Submit2" value="สั่งซื้อ" onclick="window.location='confirm_a.php'" class="btn btn-primary" />	
-	<?php } ?>
+    <input type="button" name="Submit2" value="สั่งซื้อ" onclick="window.location='confirm_a.php';" class="btn btn-primary" />
 
 	<input type="hidden" name="t_id" value="<?php echo $t_id;?>">
 	<input type="hidden" name="b_id" value="<?php echo $b_id;?>">

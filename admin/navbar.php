@@ -5,10 +5,11 @@
       </li>
 
       <li class="nav-item">
-        <a class="nav-link <?php if ($menu == "index"){echo "active";} ?>"  href="index.php"> Home </a>
+        <a class="nav-link <?php if ($menu == "index"){echo "active";} ?>"  href="index.php"><i class="fas fa-home"></i> Home</a>
       </li>
       
     </ul>
+
 
     <!-- Right navbar links -->
     <ul class="navbar-nav ml-auto">
@@ -20,3 +21,5 @@
       </li>
     </ul>
   </nav>
+ <!--  http://fordev22.com/ -->
+  <!-- /.navbar -->

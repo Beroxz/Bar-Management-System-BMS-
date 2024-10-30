@@ -1,5 +1,7 @@
 <?php
+//เรียกใช้งานไฟล์เชื่อมต่อฐานข้อมูล
 require_once 'condb.php';
+//query
 $query = "SELECT * FROM tbl_table ORDER BY table_id ASC";
 $result = mysqli_query($condb, $query);
 ?>
@@ -56,7 +58,7 @@ $result = mysqli_query($condb, $query);
           <li><a href="index.php#menu">Menu</a></li> 
           <li><a href="index.php#events">Events</a></li> 
           <li><a href="index.php#contact">Contact</a></li>
-          <li><a href="book.php">Reserved Table</a></li>
+          <li><a href="book.php">Book a Table</a></li>
         </ul>
       </nav><!-- .navbar -->
 
@@ -76,7 +78,7 @@ $result = mysqli_query($condb, $query);
         <div class="d-flex justify-content-between align-items-center">
           <ol>
             <li><a href="index.php">Home</a></li>
-            <li>Reserved Table</li>
+            <li>Book a Table</li>
           </ol>
         </div>
 
@@ -88,7 +90,7 @@ $result = mysqli_query($condb, $query);
       <div class="container" data-aos="fade-up">
 
         <div class="section-header">
-          <h1>Reserved Table</h1>
+          <h1>Book A Table</h1>
         </div>
 
         <div class="row g-0">
@@ -102,7 +104,6 @@ $result = mysqli_query($condb, $query);
         <div class="col-12 col-sm-11 col-md-7 devbanban" style="margin-top: 50px;">
           <div class="row">
             <div class="col-sm-12 col-md-12">
-            <p>หมายเหตุ : โต๊ะ 1 ที่ จัดเก้าอี้นั่งได้ไม่เกิน 5 คน โปรดจองโต๊ะให้พอดีสำหรับจำนวนลูกค้า</p>
               <div class="alert alert-warning" role="alert">
                 <center><h2>Tables</h1></center>
               </div>
@@ -111,14 +112,14 @@ $result = mysqli_query($condb, $query);
                 <?php foreach ($result as  $row) {
                   if($row['table_status']==0){ //ว่าง
                       echo '<div class="col-2 col-md-2 col-sm-2" style="margin: 5px;">';
-                    echo '<a href="booking.php?id='.$row["table_id"].'&act=booking"class="btn btn-success" target="">'.$row['table_name'].'</a></div>';
+                    echo '<a href="booking.php?id='.$row["table_id"].'&act=booking"class="btn btn-success" target="_blank">'.$row['table_name'].'</a></div>';
                     }else{ //ถูกจอง
                       echo '<div class="col-2 col-md-2 col-sm-2" style="margin: 5px;">';
-                    echo '<a href="#" class="btn btn-secondary disabled" target="">'.$row['table_name'].'</a></div>';
+                    echo '<a href="#" class="btn btn-secondary disabled" target="_blank">'.$row['table_name'].'</a></div>';
                       }
                     } ?>
                   </div>
-                  <p>*เขียว = ว่าง, เทา = จองแล้ว/ไม่ว่าง</p>
+                  <p>*เขียว = ว่าง, เทา = ไม่ว่าง</p>
                 </div>
               </div>
             </div>

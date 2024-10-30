@@ -228,8 +228,18 @@ reader.readAsDataURL(input.files[0]);
 <script>
 $(function () {
 $(".datatable").DataTable();
+// $('#example2').DataTable({
+//   "paging": true,
+//   "lengthChange": false,
+//   "searching": false,
+//   "ordering": true,
+//   "info": true,
+//   "autoWidth": false,
+// http://fordev22.com/
+// });
 });
 </script>
 
 </body>
 </html>
+<!-- http://fordev22.com/ -->

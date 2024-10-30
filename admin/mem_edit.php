@@ -13,6 +13,10 @@ $rs_member = mysqli_query($condb, $query_member);
 $row=mysqli_fetch_array($rs_member);
 //echo $row['mem_name'];
 //echo ($query_member);//test query
+
+
+
+
 ?>
 <script src="http://code.jquery.com/jquery-latest.js"></script>
       <script type="text/javascript">
@@ -28,12 +32,17 @@ $row=mysqli_fetch_array($rs_member);
             }
         }
 </script>
+
+
     <!-- Content Header (Page header) -->
     <section class="content-header">
       <div class="container-fluid">
         <h1>Member</h1>
       </div><!-- /.container-fluid -->
     </section>
+
+
+
     <!-- Main content -->
     <section class="content">
 
@@ -58,8 +67,10 @@ $row=mysqli_fetch_array($rs_member);
                         <option value="<?php echo $row['ref_l_id'];?>">-- <?php if ($row['ref_l_id']==1) {
                           echo "ผู้ดูแลระบบ(Admin)";
                         }else{
-                          echo "พนักงาน(Staff)";
+                          echo "พนักงาน";
                         } ?> --</option>
+
+
 
                           <option value="">-- เลือกประเภท --</option>
                          
@@ -67,10 +78,12 @@ $row=mysqli_fetch_array($rs_member);
                           <option value="2">พนักงาน(Staff)</option>
                           <option value="3">ลูกค้า(Member)</option>
                           
+
                         </select>
                       
                     </div>
                   </div>
+
 
                   <div class="form-group row">
                     <label for="" class="col-sm-2 col-form-label">ชื่อ </label>
@@ -97,7 +110,10 @@ $row=mysqli_fetch_array($rs_member);
 
                   <div class="form-group row">
                     <label for="" class="col-sm-2 col-form-label">img</label>
-                    <div class="col-sm-10">                         
+                    <div class="col-sm-10">
+                     
+                  
+                  
             
                   ภาพเก่า<br>
 
@@ -105,14 +121,23 @@ $row=mysqli_fetch_array($rs_member);
                         <input type="hidden" name="mem_img2" value="<?php echo $row['mem_img'];?>">
                         <br><br>
 
+
+                   
+
                     </div>
                   </div>
+
+
 
                   <div class="form-group row">
                     <label for="" class="col-sm-2 col-form-label">img</label>
                     <div class="col-sm-10">
                      
+                  
+                  
+            
                   เลือกไฟล์ใหม่<br>
+
 
                   <div class="custom-file">
                           <input type="file" class="custom-file-input" id="mem_img" name="mem_img" onchange="readURL(this);" >
@@ -120,33 +145,82 @@ $row=mysqli_fetch_array($rs_member);
                         </div>
                         <br><br>
 
+
                     <img id="blah" src="#" alt="your image" width="300" />
+
 
                     </div>
                   </div>
 
+
+
+
                   <button type="submit" class="btn btn-danger btn-block">Update</button>
 
+
+
                   </form>
+
+                    
+
+                  
+                 
             
+                    
                  </div>
                  
               </div>
 
+
             </div>
             <div class="card-footer">
                      
-            </div>            
+            </div>
+
+
+              
     </div>
+
+
+
+          
+
+          
+        
+
+          
+
+
+
     </section>
-    <!-- /.content -->  
+    <!-- /.content -->
+
+
+
+
+
+    
+
+    
 <?php include('footer.php'); ?>
 
 <script>
   $(function () {
     $(".datatable").DataTable();
+    // $('#example2').DataTable({
+    //   "paging": true,
+    //   "lengthChange": false,
+    //   "searching": false,
+    //   "ordering": true,
+    //   "info": true,
+    //   "autoWidth": false,
+    // http://fordev22.com/
+    // });
   });
 </script>
   
 </body>
 </html>
+
+
+<!-- http://fordev22.com/ -->

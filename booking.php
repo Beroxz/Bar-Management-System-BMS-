@@ -1,8 +1,11 @@
 <?php
+//เรียกใช้งานไฟล์เชื่อมต่อฐานข้อมูล
 require_once 'condb.php';
+//query
 $query = "SELECT * FROM tbl_table WHERE table_id = $_GET[id]";
 $result = mysqli_query($condb, $query);
 $row = mysqli_fetch_array($result);
+//print_r($row);
 ?>
 <!doctype html>
 <html lang="en">
@@ -27,7 +30,7 @@ $row = mysqli_fetch_array($result);
         <div class="col-sm-2 col-md-2"></div>
         <div class="col-12 col-sm-11 col-md-7 devbanban" style="margin-top: 50px;">
           <br>
-          <h4 align="center">Reserved Table</h4>
+          <h4 align="center">แสดงหมายเลขโต๊ะ</h4>
           <br>
           <div class="row">
             <div class="col-sm-12 col-md-12">
@@ -52,7 +55,7 @@ $row = mysqli_fetch_array($result);
                     <div class="form-group row">
                       <label class="col-sm-2 ">จำนวน</label>
                       <div class="col-sm-7">
-                        <input type="number" name="person" class="form-control" required placeholder="" value="2" min="1" max="5">
+                        <input type="number" name="person" class="form-control" required placeholder="" value="2">
                       </div>
                     </div>
                     <div class="form-group row">
@@ -62,13 +65,13 @@ $row = mysqli_fetch_array($result);
                       </div>
                       <label class="col-sm-1 ">เวลา</label>
                       <div class="col-sm-3">
-                        <input type="time" name="booking_time" class="form-control" required readonly value="<?php echo date('19:00:00');?>" placeholder="" min="<?php echo date('19:00:00');?>" max="<?php echo date('19:00:00');?>">
+                        <input type="time" name="booking_time" class="form-control" required placeholder="เวลา">
                       </div>
                     </div>
                     <div class="form-group row">
                       <label class="col-sm-2 ">เบอร์โทร</label>
                       <div class="col-sm-7">
-                        <input type="text" name="booking_phone" id="number" class="form-control" required placeholder="เบอร์โทร" minlength="10" maxlength="10">
+                        <input type="tel" name="booking_phone" class="form-control" required placeholder="เบอร์โทร" minlength="10" maxlength="10">
                       </div>
                     </div>
                     <div class="form-group row">
@@ -76,7 +79,6 @@ $row = mysqli_fetch_array($result);
                       <div class="col-sm-10">
                         <input type="hidden" name="table_id" value="<?php echo $_GET['id'];?>">
                        <button type="submit" class="btn btn-success">บันทึกการจอง</button>
-                       <a href="book.php" class="btn btn-secondary">ยกเลิก</a>
                        <br>
                       </div>
                     </div>
@@ -89,12 +91,3 @@ $row = mysqli_fetch_array($result);
         </div>
       </body>
     </html>
-
-    <script>
-      var input = document.getElementById("number");
-      input.onkeydown = function(e) {
-          if (48 > e.which || e.which > 57) {
-              if ( e.key.length === 1 ) e.preventDefault();
-          }
-      };
-    </script>

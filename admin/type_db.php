@@ -28,6 +28,9 @@ if (isset($_POST['type']) && $_POST['type']=="add") {
     echo "</script>";
     }
 
+
+
+
 } elseif (isset($_POST['type']) && $_POST['type']=="edit") {
 
   $type_id = mysqli_real_escape_string($condb,$_POST["type_id"]);

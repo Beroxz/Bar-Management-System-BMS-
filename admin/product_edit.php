@@ -17,6 +17,8 @@ $row=mysqli_fetch_array($rs_product);
 //echo ($query_member);//test query
 ?>
 
+
+
 <script src="http://code.jquery.com/jquery-latest.js"></script>
       <script type="text/javascript">
         function readURL(input) {
@@ -158,29 +160,70 @@ $row=mysqli_fetch_array($rs_product);
 
                   <button type="submit" class="btn btn-danger btn-block">Update</button>
 
+
+
                   </form>
-                
+
+                    
+
+                  
+                 
+            
+                    
                  </div>
                  
               </div>
+
 
             </div>
             <div class="card-footer">
                      
             </div>
-          
+
+
+              
     </div>
+
+
+
+          
+
+          
+        
+
+          
+
+
 
     </section>
     <!-- /.content -->
- 
+
+
+
+
+
+    
+
+    
 <?php include('footer.php'); ?>
 
 <script>
   $(function () {
     $(".datatable").DataTable();
+    // $('#example2').DataTable({
+    //   "paging": true,
+    //   "lengthChange": false,
+    //   "searching": false,
+    //   "ordering": true,
+    //   "info": true,
+    //   "autoWidth": false,
+    // http://fordev22.com/
+    // });
   });
 </script>
   
 </body>
 </html>
+
+
+<!-- http://fordev22.com/ -->

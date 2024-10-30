@@ -87,7 +87,7 @@ $menu = "sale";
                           <?php if ($row >0) {?> 
                             <div class="row">
                               <?php while($rs_prd = mysqli_fetch_array($nquery)){ ?> 
-                              <div class="col-md-4 col-xs-12">
+                              <div class="col-md-4">
                                 <div class="card" style="">
                                   <img width="100%" src="../p_img/<?php echo $rs_prd['p_img'] ;?>" class="card-img-top" alt="<?php echo $rs_prd['p_name'] ;?>" title="<?php echo $rs_prd['p_name'] ;?>">
                                     <div class="card-body">

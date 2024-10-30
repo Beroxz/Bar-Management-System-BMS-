@@ -31,15 +31,16 @@ $rs_table = mysqli_query($condb, $query_table);
       <br>
       <div class="card-body">
         <div class="row">
-          <div class="col-md-8">
+          
+          <div class="col-md-6">
             <table id="example1" class="table table-bordered  table-hover table-striped">
               <thead>
                 <tr class="danger">
                   <th width="5%"><center>No.</center></th>
-                  <th width="30%">Name</th>
-                  <th width="10%">Status</th>
-                  <th width="10%">edit</th>
-                  <th width="10%">del</th>
+                  <th width="35%">Name</th>
+                  <th width="35%">Status</th>
+                  <th width="20%">edit</th>
+                  <th width="20%">del</th>
                   
                 </tr>
               </thead>
@@ -49,7 +50,12 @@ $rs_table = mysqli_query($condb, $query_table);
                   <td><?php echo $row_table['table_id']; ?></td>
                   <td><?php echo $row_table['table_name']; ?></td>
                   <td><?php echo $row_table['table_status']; ?></td>
-                  <td><a href="table_edit.php?table_id=<?php echo $row_table['table_id']; ?>" class="btn btn-warning"><i class="fas fa-pencil-alt"></i> edit</a></td>
+                  <td>
+                    <p style="margin-bottom: 10px;">
+                      <a href="table_edit.php?table_id=<?php echo $row_table['table_id']; ?>" class="btn btn-warning"><i class="fas fa-pencil-alt"></i> edit</a>
+                    </p>
+                    
+                  </td>
                   <td><a href="table_db.php?table_id=<?php echo $row_table['table_id']; ?>&&table=del" class="del-btn btn btn-danger" onclick="return confirm('ต้องการลบข้อมูลนี้ใช่หรือไม่')"><i class="fas fas fa-trash"></i> del</a></td>
                   
                 </tr>
@@ -68,6 +74,9 @@ $rs_table = mysqli_query($condb, $query_table);
       </div>
       
     </div>
+    
+    
+    
     
   </section>
   <!-- /.content -->
@@ -91,6 +100,9 @@ $rs_table = mysqli_query($condb, $query_table);
                 </div>
             </div>
           </div>
+
+
+          
         <div class="modal-footer">
           <button type="button" class="btn btn-secondary" data-dismiss="modal">ปิด</button>
           <button type="submit" class="btn btn-primary"><i class="fa fa-save"></i> ยืนยัน</button>
@@ -104,8 +116,18 @@ $rs_table = mysqli_query($condb, $query_table);
 <script>
 $(function () {
 $(".datatable").DataTable();
+// $('#example2').DataTable({
+//   "paging": true,
+//   "lengthChange": false,
+//   "searching": false,
+//   "ordering": true,
+//   "info": true,
+//   "autoWidth": false,
+// http://fordev22.com/
+// });
 });
 </script>
 
 </body>
 </html>
+<!-- http://fordev22.com/ -->

@@ -15,18 +15,20 @@ $order_id = mysqli_real_escape_string($condb,$_GET['order_id']);
 				$rowmember=mysqli_fetch_array($querypay);
 				$st=$rowmember['order_status'];
 
+
+
+
 ?>
 
 
 <center>
-<h4>รายการสั่งซื้อ ร้าน BarCode <br>
-        เลขที่บิล : <?php echo $order_id; ?> </br>
-        เวลา : <?php echo date('d/m/y h:m:s',strtotime($rowmember['order_date'])); ?> </br>  
-        ผู้ทำรายการ : <?php echo $rowmember['mem_name']; ?> <br/>
-        สถานะ : <?php include('mystatus.php');?>
-      </h4>
+	<h4>รายการสั่งซื้อ<br>
+		Order Id : <?php echo $order_id; ?> </br>
+		ว/ด/ป : <?php echo date('d/m/y',strtotime($rowmember['order_date'])); ?></br>
+	ผู้ทำรายการ : <?php echo $rowmember['mem_name']; ?> <br/>สถานะ :
+	<?php include('mystatus.php');?>
+	</h4>
 </center>
-	<h1><a href="#" target="" class="btn btn-success" onclick="window.print()">Print</a></h1>
 
   <table border="0" align="center" class="table table-hover table-bordered table-striped">
     
@@ -55,6 +57,9 @@ $order_id = mysqli_real_escape_string($condb,$_GET['order_id']);
 		echo "<td>" . $rspay["p_name"] . "</td>";
 		echo "<td align='right'>" .number_format($rspay["p_price"],2) . "</td>";
 		echo "<td align='right'>"; 
+
+
+
 		
 		echo "<input type='number' name='p_c_qty' value='$rspay[p_c_qty]' size='2'class='form-control' disabled/></td>";
 
@@ -95,6 +100,7 @@ $order_id = mysqli_real_escape_string($condb,$_GET['order_id']);
 
     </td>
 
+
   	<td align='right'colspan='2'>
 
 
@@ -105,10 +111,18 @@ $order_id = mysqli_real_escape_string($condb,$_GET['order_id']);
   		<br>
   			<b><?php echo number_format($pay_amount3,2);?> Baht</b>
 
+
+
   	</td>
   	
 	</tr>
 
+
+	
+
+	
+
 </table>
 <br>
 
+<a href="#" target="" class="btn btn-success" onclick="window.print()">Print</a>

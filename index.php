@@ -9,16 +9,19 @@
 
   <!-- Favicons -->
   <link href="assets/img/favicon.png" rel="icon">
+
   <!-- Google Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,600;1,700&family=Amatic+SC:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&family=Inter:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&display=swap" rel="stylesheet">
+
   <!-- Vendor CSS Files -->
   <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
   <link href="assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
   <link href="assets/vendor/aos/aos.css" rel="stylesheet">
   <link href="assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
   <link href="assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
+
   <!-- Template Main CSS File -->
   <link href="assets/css/main.css" rel="stylesheet">
 
@@ -42,7 +45,7 @@
           <li><a href="#menu">Menu</a></li> 
           <li><a href="#events">Events</a></li> 
           <li><a href="#contact">Contact</a></li>
-          <li><a href="book.php">Reserved Table </a></li>
+          <li><a href="book.php">Book a Table</a></li>
         </ul>
       </nav><!-- .navbar -->
 
@@ -171,30 +174,30 @@
               </div><!-- Menu Item -->
 
               <div class="col-lg-4 menu-item">
-                <a href="assets/img/menu/Beans.jpg" class="glightbox"><img src="assets/img/menu/Beans.jpg" class="menu-img img-fluid" alt=""></a>
+                <a href="assets/img/menu/peanuts2.jpg" class="glightbox"><img src="assets/img/menu/peanuts2.jpg" class="menu-img img-fluid" alt=""></a>
                 <h4>Peanuts</h4>
                 <p class="ingredients">
-                Price per 1 pack.
+                  Price per 1 plate.
                 </p>
-                <p class="price">฿25</p>
+                <p class="price">฿30</p>
               </div><!-- Menu Item -->
 
               <div class="col-lg-4 menu-item">
-                <a href="assets/img/menu/chacha.jpg" class="glightbox"><img src="assets/img/menu/chacha.jpg" class="menu-img img-fluid" alt=""></a>
-                <h4>Chacha</h4>
+                <a href="assets/img/menu/frenchfrie.png" class="glightbox"><img src="assets/img/menu/frenchfrie.png" class="menu-img img-fluid" alt=""></a>
+                <h4>French fries</h4>
                 <p class="ingredients">
-                Price per 1 pack.
+                  Price per 1 plate.
                 </p>
-                <p class="price">฿20</p>
+                <p class="price">฿45</p>
               </div><!-- Menu Item -->
 
               <div class="col-lg-4 menu-item">
-                <a href="assets/img/menu/peanuts.jpg" class="glightbox"><img src="assets/img/menu/peanuts.jpg" class="menu-img img-fluid" alt=""></a>
-                <h4>Peanuts</h4>
+                <a href="assets/img/menu/Enchick.jpg" class="glightbox"><img src="assets/img/menu/Enchick.jpg" class="menu-img img-fluid" alt=""></a>
+                <h4>Fried Chicken Tendons</h4>
                 <p class="ingredients">
-                Price per 1 pack.
+                  Price per 1 plate.
                 </p>
-                <p class="price">฿25</p>
+                <p class="price">฿60</p>
               </div><!-- Menu Item -->
 
             </div>
