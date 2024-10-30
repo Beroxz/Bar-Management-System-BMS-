@@ -1,8 +1,11 @@
 <?php
+//เรียกใช้งานไฟล์เชื่อมต่อฐานข้อมูล
 require_once 'condb.php';
+//query
 $query = "SELECT * FROM tbl_table WHERE table_id = $_GET[id]";
 $result = mysqli_query($condb, $query);
 $row = mysqli_fetch_array($result);
+//print_r($row);
 ?>
 <!doctype html>
 <html lang="en">
@@ -62,7 +65,7 @@ $row = mysqli_fetch_array($result);
                       </div>
                       <label class="col-sm-1 ">เวลา</label>
                       <div class="col-sm-3">
-                        <input type="time" name="booking_time" class="form-control" required readonly value="<?php echo date('19:00:00');?>" placeholder="" min="<?php echo date('19:00:00');?>" max="<?php echo date('19:00:00');?>">
+                        <input type="time" name="booking_time" class="form-control" required placeholder="เวลา">
                       </div>
                     </div>
                     <div class="form-group row">

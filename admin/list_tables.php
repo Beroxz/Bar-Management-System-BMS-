@@ -69,6 +69,9 @@ $rs_table = mysqli_query($condb, $query_table);
       
     </div>
     
+    
+    
+    
   </section>
   <!-- /.content -->
 
@@ -91,6 +94,9 @@ $rs_table = mysqli_query($condb, $query_table);
                 </div>
             </div>
           </div>
+
+
+          
         <div class="modal-footer">
           <button type="button" class="btn btn-secondary" data-dismiss="modal">ปิด</button>
           <button type="submit" class="btn btn-primary"><i class="fa fa-save"></i> ยืนยัน</button>
@@ -104,8 +110,18 @@ $rs_table = mysqli_query($condb, $query_table);
 <script>
 $(function () {
 $(".datatable").DataTable();
+// $('#example2').DataTable({
+//   "paging": true,
+//   "lengthChange": false,
+//   "searching": false,
+//   "ordering": true,
+//   "info": true,
+//   "autoWidth": false,
+// http://fordev22.com/
+// });
 });
 </script>
 
 </body>
 </html>
+<!-- http://fordev22.com/ -->

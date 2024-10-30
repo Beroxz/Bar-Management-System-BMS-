@@ -1,6 +1,7 @@
 <?php $menu ="table"; ?>
 
 <?php
+//เรียกใช้งานไฟล์เชื่อมต่อฐานข้อมูล
 require_once '../condb.php';
 //query
 $query = "SELECT * FROM tbl_table ORDER BY table_id ASC";
@@ -36,19 +37,15 @@ $row = mysqli_fetch_array($result);
                   <div class="box-body">
                   <div class="row" style="margin-bottom: 20px;">
                   <!-- booking.php?id='.$row["id"].'&act=booking   ของจองโต๊ะ -->
-                    <?php foreach ($result as  $row) {
-                      $cartCheck  = $condb->query("SELECT * FROM tbl_cart WHERE table_id = " . $row["table_id"]);
-                      if ($cartCheck->num_rows >= 1) { // มีลูกค้า
+                  <?php foreach ($result as  $row) {
+                    if($row['table_status']==0){ //ว่าง
                         echo '<div class="col-2 col-md-2 col-sm-2" style="margin: 5px;">';
-                        echo '<a href="new_table_sale.php?id=' . $row["table_id"] . '&act=booking" class="btn btn-warning disabled" style="padding: 1.5rem 3rem">' . $row['table_name'] . '</a></div>';
-                      } else if ($row['table_status'] == 0) { //ว่าง
+                      echo '<a href="book_table_into.php?id='.$row["table_id"].'&act=booking" class="btn btn-success" style="padding: 1.5rem 3rem">'.$row['table_name'].'</a></div>';
+                      }else{ //ถูกจอง
                         echo '<div class="col-2 col-md-2 col-sm-2" style="margin: 5px;">';
-                        echo '<a href="book_table_into.php?id=' . $row["table_id"] . '&act=booking" class="btn btn-success" style="padding: 1.5rem 3rem">' . $row['table_name'] . '</a></div>';
-                      } else { //ถูกจอง
-                        echo '<div class="col-2 col-md-2 col-sm-2" style="margin: 5px;">';
-                        echo '<a href="" class="btn btn-primary disabled" style="padding: 1.5rem 3rem">' . $row['table_name'] . '</a></div>';
-                      }
-                    } ?>
+                      echo '<a href="" class="btn btn-primary disabled" style="padding: 1.5rem 3rem">'.$row['table_name'].'</a></div>';
+                        }
+                      } ?>
                    </div>
                    </div>
                 </div>    
@@ -64,6 +61,9 @@ $row = mysqli_fetch_array($result);
       </div>
       
     </div>
+    
+    
+    
     
   </section>
   <!-- /.content -->
@@ -130,8 +130,18 @@ $row = mysqli_fetch_array($result);
   <script>
   $(function () {
   $(".datatable").DataTable();
+  // $('#example2').DataTable({
+  //   "paging": true,
+  //   "lengthChange": false,
+  //   "searching": false,
+  //   "ordering": true,
+  //   "info": true,
+  //   "autoWidth": false,
+  // http://fordev22.com/
+  // });
   });
   </script>
   
 </body>
 </html>
+<!-- http://fordev22.com/ -->

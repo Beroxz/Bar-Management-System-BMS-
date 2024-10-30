@@ -48,6 +48,9 @@ if (isset($_POST['table']) && $_POST['table']=="add") {
     echo "</script>";
     }
 
+
+
+
 } elseif (isset($_POST['table']) && $_POST['table']=="edit") {
 
   $table_id = mysqli_real_escape_string($condb,$_POST["table_id"]);

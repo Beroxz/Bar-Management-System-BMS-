@@ -8,7 +8,7 @@ $menu = "member"
 $query_member = "SELECT * FROM tbl_member" or die
 ("Error : ".mysqlierror($query_member));
 $rs_member = mysqli_query($condb, $query_member);
-
+//echo ($query_level);//test query
 ?>
 <script src="http://code.jquery.com/jquery-latest.js"></script>
 <script type="text/javascript">
@@ -26,7 +26,7 @@ reader.readAsDataURL(input.files[0]);
 <section class="content-header">
   <div class="container-fluid">
     <h1>จัดการสมาชิก</h1>
-    </div>
+    </div><!-- /.container-fluid -->
   </section>
   <!-- Main content -->
   <section class="content">
@@ -68,12 +68,12 @@ reader.readAsDataURL(input.files[0]);
                       <a href="mem_edit.php?mem_id=<?php echo $row_member['mem_id']; ?>" class="btn btn-warning"><i class="fas fa-pencil-alt"></i> edit</a>
                     </p>
                     
+                    <!-- <a href="level.php?ace=edit&l_id=<?php echo $row_level['l_id'];?>" class="btn btn-warning btn-xs"> edit</a> -->
                   </td>
                   <td><a href="member_db.php?mem_id=<?php echo $row_member['mem_id']; ?>&&member=del" class="del-btn btn btn-danger" onclick="return confirm('ต้องการลบข้อมูลนี้ใช่หรือไม่')"><i class="fas fas fa-trash"></i> del</a></td>
                   
                 </tr>
-                <?php 
-              }?>
+                <?php }?>
               </tbody>
             </table>
             
@@ -88,6 +88,9 @@ reader.readAsDataURL(input.files[0]);
       </div>
       
     </div>
+    
+    
+    
     
   </section>
   <!-- /.content -->
@@ -112,7 +115,6 @@ reader.readAsDataURL(input.files[0]);
                   
                   <option value="1">ผู้ดูแลระบบ(Admin)</option>
                   <option value="2">พนักงาน(Staff)</option>
-                  <option value="3">ลูกค้า(Member)</option>
                   
                 </select>
                 
@@ -142,7 +144,6 @@ reader.readAsDataURL(input.files[0]);
           <div class="form-group row">
             <label for="" class="col-sm-2 col-form-label">img</label>
             <div class="col-sm-10">
-            
               เลือกไฟล์ใหม่<br>
               <div class="custom-file">
                 <input type="file" class="custom-file-input" id="mem_img" name="mem_img" onchange="readURL(this);" >
@@ -152,7 +153,7 @@ reader.readAsDataURL(input.files[0]);
               <img id="blah" src="#" alt="your image" width="300" />
             </div>
           </div>
-          
+      
         </div>
         <div class="modal-footer">
           <button type="button" class="btn btn-secondary" data-dismiss="modal">ปิด</button>
@@ -167,8 +168,18 @@ reader.readAsDataURL(input.files[0]);
 <script>
 $(function () {
 $(".datatable").DataTable();
+// $('#example2').DataTable({
+//   "paging": true,
+//   "lengthChange": false,
+//   "searching": false,
+//   "ordering": true,
+//   "info": true,
+//   "autoWidth": false,
+// http://fordev22.com/
+// });
 });
 </script>
 
 </body>
 </html>
+<!-- http://fordev22.com/ -->

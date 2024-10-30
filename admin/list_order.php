@@ -10,8 +10,14 @@ ORDER BY o.order_id DESC
 or die
 ("Error : ".mysqlierror($query_my_order));
 $rs_my_order = mysqli_query($condb, $query_my_order);
+//echo ($query_my_order);//test query
+
+
+
 
 ?>
+
+
 
 <table id="example1" class="table table-bordered  table-hover table-striped">
   <thead>
@@ -28,6 +34,7 @@ $rs_my_order = mysqli_query($condb, $query_my_order);
   <tbody>
     <?php foreach ($rs_my_order as $rs_order) { ?>
      
+    
     <tr>
 
      <td><?php echo $rs_order['order_id']; ?></td>
@@ -47,6 +54,7 @@ $rs_my_order = mysqli_query($condb, $query_my_order);
      <td><?php echo date('d/m/y H:i:s',strtotime($rs_order['order_date'])); ?></td>
      
      <td>
+     
      
       <a href="bill_order.php?order_id=<?php echo $rs_order['order_id'];?>&act=view" target="_blank" class="btn btn-primary btn-xs"><i class="nav-icon fas fa-clipboard-list"></i> เปิดดูรายการ</a>
      </td>

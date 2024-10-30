@@ -1,4 +1,5 @@
 <?php 
+
 session_start();
         if(isset($_POST['mem_username'])){
         //connection
@@ -28,10 +29,12 @@ session_start();
                                   $_SESSION["mem_level"] = $row["mem_level"];
                                   $_SESSION["mem_img"] = $row["mem_img"];
                                   $_SESSION["mem_address"] = $row["mem_address"];
-                                  $table = substr($mem_username,1);
-                                  
-                                  if($_SESSION["mem_level"]=="1"){ //ถ้าเป็น admin ให้กระโดดไปหน้า admin.php
-                                  
+                                  //print_r($_SESSION);
+                                  //var_dump($_SESSION);
+                                  //exit();
+                                  if($_SESSION["mem_level"]=="1"){ //ถ้าเป็น admin ให้กระโดดไปหน้า admin_page.php
+                                    //echo "Are Your Admin";
+                                    //exit();
                                     Header("Location: admin/");
 
                                   }
@@ -41,7 +44,7 @@ session_start();
                                   }
                                   elseif($_SESSION["mem_level"]=="3"){  
 
-                                    Header("Location: member/new_table_sale.php?id=$table");
+                                    Header("Location: table_mem/");
                                   }
                               }else{
                                 echo "<script>";
@@ -49,7 +52,8 @@ session_start();
                                     echo "window.history.back()";
                                 echo "</script>";
                               }
-                    }
+                    }//close else chk trim
+                    //exit();
         }else{
              Header("Location: login.php"); //user & mem_password incorrect back to login again
         }

@@ -11,8 +11,14 @@ $query_table = "SELECT * FROM tbl_table WHERE table_id = $table_id"
 or die("Error : ".mysqlierror($query_table));
 $rs_table = mysqli_query($condb, $query_table);
 $row=mysqli_fetch_array($rs_table);
+//echo $row['table_name'];
+//echo ($query_table);//test query
+
+
+
 
 ?>
+
 
     <!-- Content Header (Page header) -->
     <section class="content-header">
@@ -20,6 +26,8 @@ $row=mysqli_fetch_array($rs_table);
         <h1>Table</h1>
       </div><!-- /.container-fluid -->
     </section>
+
+
 
     <!-- Main content -->
     <section class="content">
@@ -62,19 +70,52 @@ $row=mysqli_fetch_array($rs_table);
             </div>
             <div class="card-footer">
                      
-            </div>  
+            </div>
+
+
+              
     </div>
+
+
+
+          
+
+          
+        
+
+          
+
+
 
     </section>
     <!-- /.content -->
- 
+
+
+
+
+
+    
+
+    
 <?php include('footer.php'); ?>
 
 <script>
   $(function () {
     $(".datatable").DataTable();
+    // $('#example2').DataTable({
+    //   "paging": true,
+    //   "lengthChange": false,
+    //   "searching": false,
+    //   "ordering": true,
+    //   "info": true,
+    //   "autoWidth": false,
+    // http://fordev22.com/
+    // });
   });
 </script>
   
 </body>
 </html>
+
+
+<!-- http://fordev22.com/ -->

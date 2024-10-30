@@ -15,7 +15,11 @@ $order_id = mysqli_real_escape_string($condb,$_GET['order_id']);
 				$rowmember=mysqli_fetch_array($querypay);
 				$st=$rowmember['order_status'];
 
+
+
+
 ?>
+
 
 <center>
 	<h4>รายการสั่งซื้อ<br>
@@ -112,6 +116,11 @@ $order_id = mysqli_real_escape_string($condb,$_GET['order_id']);
   	</td>
   	
 	</tr>
+
+
+	
+
+	
 
 </table>
 <br>

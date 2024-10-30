@@ -79,6 +79,9 @@ if (isset($_POST['member']) && $_POST['member']=="add") {
     echo "</script>";
     }
 
+
+
+
 } elseif (isset($_POST['member']) && $_POST['member']=="edit") {
 
   $mem_id = mysqli_real_escape_string($condb,$_POST["mem_id"]);

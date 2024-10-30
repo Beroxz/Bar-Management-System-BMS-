@@ -56,7 +56,7 @@
         <div class="form-group row">
           <label class="col-sm-2 ">เวลา</label>
             <div class="col-sm-10">
-              <input type="text" name="booking_time" class="form-control" required readonly value="<?php echo date('19:00:00');?>" placeholder="" min="<?php echo date('19:00:00');?>" max="<?php echo date('19:00:00');?>">
+              <input type="time" name="booking_time" class="form-control" required placeholder="เวลา">
             </div>
         </div>
 
@@ -93,6 +93,15 @@
   <script>
     $(function () {
     $(".datatable").DataTable();
+    // $('#example2').DataTable({
+    //   "paging": true,
+    //   "lengthChange": false,
+    //   "searching": false,
+    //   "ordering": true,
+    //   "info": true,
+  vscode-file://vscode-app/c:/Users/kitti/AppData/Local/Programs/Microsoft%20VS%20Code/resources/app/out/vs/code/electron-sandbox/workbench/workbench.html //   "autoWidth": false,
+    // http://fordev22.com/
+    // });
     });
   </script>
 
@@ -107,3 +116,4 @@
   
 </body>
 </html>
+<!-- http://fordev22.com/ -->

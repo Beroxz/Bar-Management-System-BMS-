@@ -1,5 +1,7 @@
 <?php
+//เรียกใช้งานไฟล์เชื่อมต่อฐานข้อมูล
 require_once 'condb.php';
+//query
 $query = "SELECT * FROM tbl_table ORDER BY table_id ASC";
 $result = mysqli_query($condb, $query);
 ?>
@@ -118,7 +120,7 @@ $result = mysqli_query($condb, $query);
                       }
                     } ?>
                   </div>
-                  <p>*เขียว = ว่าง, เทา = จองแล้ว/ไม่ว่าง</p>
+                  <p>*เขียว = ว่าง, เทา = จองแล้ว</p>
                 </div>
               </div>
             </div>

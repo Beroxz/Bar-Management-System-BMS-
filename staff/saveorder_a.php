@@ -3,29 +3,29 @@ include("../condb.php");
  //error_reporting( error_reporting() & ~E_NOTICE );
 	session_start();
       
-	$mem_id=$_SESSION['mem_id'];
-	if (@$_SESSION['mem_id'] == ''){
+$mem_id=$_SESSION['mem_id'];
+if (@$_SESSION['mem_id'] == ''){
 
-	session_destroy();
+  session_destroy();
 
-	echo '<script>';
-	echo"alert('ไม่สำเร็จ');";
-	echo "window.location='index.php';";
-	echo'</script>';
+  echo '<script>';
+  echo"alert('ไม่สำเร็จ');";
+  echo "window.location='index.php';";
+  echo'</script>';
 }
 ?>
 
+
+
 <!--สร้างตัวแปรสำหรับบันทึกการสั่งซื้อ -->
 <?php
-
-	$act = mysqli_real_escape_string($condb, $_GET['act']);
 	$mem_id = $_REQUEST["mem_id"];
 	$receive_name = 'ลูกค้าหน้าร้าน';
 	
 	
-	$order_status = 2;
+	$order_status = 4;
 	
-	$b_name = 'ชำระเงินสด';
+	$b_name = 'ชำระหน้าร้าน';
 	
 	$pay_amount = $_REQUEST["pay_amount"];//ยอดเงินรวม
 	$pay_amount2 = $_REQUEST["pay_amount2"];//ยอดเงินที่ต้องจ่าย
@@ -134,5 +134,5 @@ include("../condb.php");
 <script type="text/javascript">
 	//alert("<?php echo $msg;?>");
 	// window.location ='index.php?save_ok=save_ok';
-	window.location ='bill_order.php?order_id=<?php echo $order_id;?>&act=view&&save_ok=save_ok';
+	window.location ='cart_detail.php?order_id=<?php echo $order_id;?>&act=view&&save_ok=save_ok';
 </script>

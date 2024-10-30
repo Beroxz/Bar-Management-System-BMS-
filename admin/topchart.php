@@ -14,7 +14,8 @@ GROUP BY o.p_id ORDER BY  totol DESC LIMIT 5
 or die
 ("Error : ".mysqlierror($query_my_order));
 $rs_my_order = mysqli_query($condb, $query_my_order);
-
+//echo ($query_my_order);//test query
+//exit();
 ?>
 
 <!-- CDN เชื่อมต่อ chart -->
@@ -67,15 +68,22 @@ $rs_my_order = mysqli_query($condb, $query_my_order);
                 echo"</tr>";
                 }
                 ?>
+                
               </tbody>
-            </table>      
-          </div>        
+            </table>
+            
+          </div>
+          
         </div>
+        
       </div>
     </div>
     <div class="card-footer">
+      
     </div>
+    
   </div>
+  
 </section>
 <!-- /.content -->
 
@@ -145,6 +153,7 @@ title: {
 text: 'ยอดขาย',
 style: {
 
+
 }
 
 }
@@ -172,8 +181,18 @@ this.point.y + ' ' + this.point.name.toLowerCase();
 <script>
 $(function () {
 $(".datatable").DataTable();
+// $('#example2').DataTable({
+//   "paging": true,
+//   "lengthChange": false,
+//   "searching": false,
+//   "ordering": true,
+//   "info": true,
+//   "autoWidth": false,
+// http://fordev22.com/
+// });
 });
 </script>
 
 </body>
 </html>
+<!-- http://fordev22.com/ -->
