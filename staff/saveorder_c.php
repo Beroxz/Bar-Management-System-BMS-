@@ -6,7 +6,7 @@ session_start();
 $mem_id = $_SESSION['mem_id'];
 if (@$_SESSION['mem_id'] == '') {
 
-	session_destroy();
+session_destroy();
 
 	echo '<script>';
 	echo "alert('ไม่สำเร็จ');";
@@ -120,7 +120,7 @@ while ($cart_item = $query->fetch_assoc()) {
 if ($query1 && $query4) {
 	$condb->query("DELETE FROM tbl_cart_item WHERE table_id=$table_id");
 	$condb->query("DELETE FROM tbl_cart WHERE table_id=$table_id");
-	$condb->query("DELETE FROM tbl_booking WHERE table_id=$table_id");
+	// $condb->query("DELETE FROM tbl_booking WHERE table_id=$table_id"); //ลบการจองทิ้ง
 	$condb->query("UPDATE tbl_table SET table_status=0 WHERE table_id=$table_id");
 
 	mysqli_query($condb, "COMMIT"); //จะ COMMIT บันทึกสำเร็จคือบันทึก sql1 กับ sql4 แล้ว

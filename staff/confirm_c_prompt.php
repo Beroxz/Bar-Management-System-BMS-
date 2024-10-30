@@ -225,6 +225,7 @@ $mem_address = $_SESSION['mem_address'];
                     </header>
                     <div class="content">
                       <center>
+                      <img src="../assets/img/PromptPay-logo.png" width="130" height="auto">
                         <?php include('../PromptPay-QR/promptPay.php'); ?>
                       </center>
                       <div class="field">
@@ -235,6 +236,7 @@ $mem_address = $_SESSION['mem_address'];
                       </div>
                     </div>
                     <div align="right">
+                    <button type="button" class="btn btn-danger" onclick="window.location='confirm_c_prompt.php?<?php echo 'table_id=' . $table_id ?>';">ยกเลิก</button>
                       <button type="submit" class="btn btn-secondary" action = "promptpay">ยืนยันการทำรายการ</button>
                     </div>
                   </div>

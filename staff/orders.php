@@ -28,13 +28,9 @@
           $rs_my_order = mysqli_query($condb, $query_my_order);
           //echo ($query_my_order);//test query
 
-
-
           $i = 0;
 
           ?>
-
-
 
           <table id="example1" class="table table-bordered  table-hover table-striped">
             <thead>
@@ -70,7 +66,7 @@
                   <td><?php echo date('d/m/y H:i:s', strtotime($rs_order['date'])); ?></td>
 
                   <td>
-                    <a href="cart.php?table_id=<?php echo $rs_order["table_id"]; ?>" class="btn btn-primary btn-xs">จัดการออเดอร์</a>
+                    <a href="confirm_c.php?table_id=<?php echo $rs_order["table_id"]; ?>" class="btn btn-primary btn-xs">จัดการออเดอร์</a>
                   </td>
 
                 </tr>

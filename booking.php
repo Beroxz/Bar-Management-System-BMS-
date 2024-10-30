@@ -62,7 +62,7 @@ $row = mysqli_fetch_array($result);
                       </div>
                       <label class="col-sm-1 ">เวลา</label>
                       <div class="col-sm-3">
-                        <input type="time" name="booking_time" class="form-control" required placeholder="เวลา">
+                        <input type="time" name="booking_time" class="form-control" required readonly value="<?php echo date('19:00:00');?>" placeholder="" min="<?php echo date('19:00:00');?>" max="<?php echo date('19:00:00');?>">
                       </div>
                     </div>
                     <div class="form-group row">

@@ -56,7 +56,7 @@
         <div class="form-group row">
           <label class="col-sm-2 ">เวลา</label>
             <div class="col-sm-10">
-              <input type="time" name="booking_time" class="form-control" required placeholder="เวลา">
+              <input type="text" name="booking_time" class="form-control" required readonly value="<?php echo date('19:00:00');?>" placeholder="" min="<?php echo date('19:00:00');?>" max="<?php echo date('19:00:00');?>">
             </div>
         </div>
 

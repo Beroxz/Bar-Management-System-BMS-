@@ -23,7 +23,7 @@ $result = mysqli_query($condb, $query);
     <div class="card-header ">
       <h3 class="card-title">แสดงรายการโต๊ะ</h3>
       <div align="right">
-    
+      <button type="button" class="btn btn-info" data-toggle="modal" data-target="#exampleModal">Account Table</button>
       </div>
     </div>
     <br>
@@ -67,6 +67,55 @@ $result = mysqli_query($condb, $query);
 
 </section>
 <!-- /.content -->
+
+<div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-sm" role="document">
+      <form action="member_db.php" method="POST" enctype="multipart/form-data">
+        <div class="modal-content">
+          <div class="modal-header bg-dark">
+            <h5 class="modal-title" id="exampleModalLabel">Table</h5>
+            <button type="button" class="close text-white" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+            </button>
+          </div>
+          <div class="modal-body">
+            <div class="form-group row">
+              <div class="col-sm-12">
+                <select class="form-control select2" name="mem_level" id="mem_level" required>
+                  <option value="3">ลูกค้า(Member)</option>
+                </select>
+                
+              </div>
+            </div>
+            
+            <div class="form-group row">
+              <div class="col-sm-12">
+                <input type="text" name="mem_name" class="form-control" id="mem_name" placeholder="ชื่อโต๊ะ" value="">
+              </div>
+            </div>
+            
+          </span>
+          <div class="form-group row">
+            <div class="col-sm-12">
+              <input type="text" name="mem_username" class="form-control" id="mem_username" placeholder="Username" value="">
+            </div>
+          </div>
+          <div class="form-group row">
+            <div class="col-sm-12">
+              <input type="text" name="mem_password" class="form-control" id="mem_password" placeholder="Password" value="" required>
+            </div>
+          </div>
+          
+        </div>
+        <div class="modal-footer">
+          <button type="submit" class="btn btn-danger" name="member" value="del">Delete</button>
+          <button type="submit" class="btn btn-primary" name="member" value="edit">Update</button>
+          <button type="submit" class="btn btn-success" name="member" value="add"><i class="fa fa-save"></i> ยืนยัน</button>
+        </div>
+      </div>
+    </form>
+  </div>
+</div>
 
 <?php include('footer.php'); ?>
 <script>

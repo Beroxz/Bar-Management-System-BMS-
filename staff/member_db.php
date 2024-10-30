@@ -26,7 +26,7 @@ if (isset($_POST['member']) && $_POST['member']=="add") {
       if($num > 0)
       {
         echo "<script>";
-        echo "window.location = 'index.php'; ";
+        echo "window.location = 'index.php?mem_error=mem_error'; ";
         echo "</script>";
       }else{
   
@@ -50,7 +50,7 @@ if (isset($_POST['member']) && $_POST['member']=="add") {
     )";
   
     $result = mysqli_query($condb, $sql) or die ("Error in query: $sql " . mysqli_error($condb). "<br>$sql");
-  
+      
     }
     //exit();
     //mysqli_close($condb);
@@ -98,11 +98,10 @@ if (isset($_POST['member']) && $_POST['member']=="add") {
 	mem_level='$mem_level',
 	
 	mem_name='$mem_name',
-	
-	mem_username='$mem_username',
+
 	mem_password='$mem_password',
 	mem_img='$newname'
-	WHERE mem_id=$mem_id" ;
+	WHERE mem_username='$mem_username'" ;
 
 	$result = mysqli_query($condb, $sql) or die ("Error in query: $sql " . mysqli_error($condb). "<br>$sql");
 	mysqli_close($condb);
@@ -110,23 +109,23 @@ if (isset($_POST['member']) && $_POST['member']=="add") {
 	if($result){
 	echo "<script type='text/javascript'>";
 	//echo "alert('แก้ไขข้อมูลเรียบร้อย');";
-	echo "window.location = 'mem_edit.php?mem_id=$mem_id&&mem_edit=mem_edit'; ";
+	echo "window.location = 'index.php?mem_id=$mem_id&&mem_edit=mem_edit'; ";
 	echo "</script>";
 	}else{
 	echo "<script type='text/javascript'>";
-	echo "window.location = 'mem_edit.php?mem_id=$mem_id&&mem_edit_error=mem_edit_error'; ";
+	echo "window.location = 'index.php?mem_id=$mem_id&&mem_edit_error=mem_edit_error'; ";
 	echo "</script>";
 	}
 
-}elseif (isset($_GET['member']) && $_GET['member']=="del"){	
+}elseif (isset($_POST['member']) && $_POST['member']=="del"){	
 
-  $mem_id  = mysqli_real_escape_string($condb,$_GET["mem_id"]);
-	$sql_del = "DELETE FROM tbl_member WHERE mem_id = $mem_id";
+  $mem_username = mysqli_real_escape_string($condb,$_POST["mem_username"]);
+	$sql_del = "DELETE FROM tbl_member WHERE mem_username='$mem_username'";
 	$result_del = mysqli_query($condb, $sql_del) or die ("Error in query: $sql_del ". mysqli_error());	
 	mysqli_close($condb);
   
   echo "<script type ='text/javascript'>";
-  echo "window.location = 'list_mem.php?mem_del=mem_del';";
+  echo "window.location = 'index.php?mem_del=mem_del';";
   echo "</script>";
 
 

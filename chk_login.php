@@ -28,7 +28,7 @@ session_start();
                                   $_SESSION["mem_level"] = $row["mem_level"];
                                   $_SESSION["mem_img"] = $row["mem_img"];
                                   $_SESSION["mem_address"] = $row["mem_address"];
-                                  $table = substr($row["mem_name"],2);
+                                  $table = substr($mem_username,1);
                                   
                                   if($_SESSION["mem_level"]=="1"){ //ถ้าเป็น admin ให้กระโดดไปหน้า admin.php
                                   

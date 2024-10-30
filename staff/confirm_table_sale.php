@@ -68,6 +68,12 @@ $row = mysqli_fetch_array($result);
               <input type="text" name="date" class="form-control" id="booking_date" readonly value="<?php echo $row['dateCreate'];?>">
             </div>
           </div>
+          <div class="form-group row">
+            <label for="" class="col-sm-2 col-form-label">เวลารับโต๊ะจอง</label>
+            <div class="col-sm-10">
+              <input type="text" name="time" class="form-control" id="booking_time" readonly value="<?php echo $row['booking_time'];?>">
+            </div>
+          </div>
         </div>
         <div class="modal-footer">
           <a href="index.php" class="btn btn-secondary">ปิด</a>

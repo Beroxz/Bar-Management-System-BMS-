@@ -168,6 +168,7 @@ $menu = "sale";
                     </header>
                     <div class="content">
                       <center>
+                      <img src="../assets/img/PromptPay-logo.png" width="130" height="auto">
                         <?php include('../PromptPay-QR/promptPay.php'); ?>
                       </center>
                       <div class="field">
@@ -178,10 +179,12 @@ $menu = "sale";
                       </div>
                     </div>
                     <div align="right">
+                    <button type="button" class="btn btn-danger" onclick="window.location='confirm_a_prompt.php';">ยกเลิก</button>
                       <button type="submit" class="btn btn-secondary" action = "promptpay">ยืนยันการทำรายการ</button>
                     </div>
                   </div>
                 <?php } ?>
+
           </form>
 		    </div>
 	    </div>

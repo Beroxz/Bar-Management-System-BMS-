@@ -171,30 +171,30 @@
               </div><!-- Menu Item -->
 
               <div class="col-lg-4 menu-item">
-                <a href="assets/img/menu/peanuts2.jpg" class="glightbox"><img src="assets/img/menu/peanuts2.jpg" class="menu-img img-fluid" alt=""></a>
+                <a href="assets/img/menu/Beans.jpg" class="glightbox"><img src="assets/img/menu/Beans.jpg" class="menu-img img-fluid" alt=""></a>
                 <h4>Peanuts</h4>
                 <p class="ingredients">
-                  Price per 1 plate.
+                Price per 1 pack.
                 </p>
-                <p class="price">฿30</p>
+                <p class="price">฿25</p>
               </div><!-- Menu Item -->
 
               <div class="col-lg-4 menu-item">
-                <a href="assets/img/menu/frenchfrie.png" class="glightbox"><img src="assets/img/menu/frenchfrie.png" class="menu-img img-fluid" alt=""></a>
-                <h4>French fries</h4>
+                <a href="assets/img/menu/chacha.jpg" class="glightbox"><img src="assets/img/menu/chacha.jpg" class="menu-img img-fluid" alt=""></a>
+                <h4>Chacha</h4>
                 <p class="ingredients">
-                  Price per 1 plate.
+                Price per 1 pack.
                 </p>
-                <p class="price">฿45</p>
+                <p class="price">฿20</p>
               </div><!-- Menu Item -->
 
               <div class="col-lg-4 menu-item">
-                <a href="assets/img/menu/Enchick.jpg" class="glightbox"><img src="assets/img/menu/Enchick.jpg" class="menu-img img-fluid" alt=""></a>
-                <h4>Fried Chicken Tendons</h4>
+                <a href="assets/img/menu/peanuts.jpg" class="glightbox"><img src="assets/img/menu/peanuts.jpg" class="menu-img img-fluid" alt=""></a>
+                <h4>Peanuts</h4>
                 <p class="ingredients">
-                  Price per 1 plate.
+                Price per 1 pack.
                 </p>
-                <p class="price">฿60</p>
+                <p class="price">฿25</p>
               </div><!-- Menu Item -->
 
             </div>

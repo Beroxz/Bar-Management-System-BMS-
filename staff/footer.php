@@ -167,6 +167,17 @@ echo '<meta http-equiv="refresh" content="1;url=index.php" />';
 </script>
 <?php } ?>
 
+<?php if(isset($_GET['mem_error'])){ ?>
+<script>
+  Swal.fire({
+  title: 'error',
+  text: 'ข้อมูล Username ซ้ำ',
+  icon: 'error',
+  confirmButtonText: 'ตกลง'
+})
+</script>
+<?php } ?>
+
 <?php if(isset($_GET['product_add'])){ ?>
 <script>
   Swal.fire({

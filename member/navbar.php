@@ -10,8 +10,8 @@
     <!-- Right navbar links -->
     <ul class="navbar-nav ml-auto">
       <li class="nav-item ">
-        <a href="../logout.php" class="nav-link ">
-          <i class="fa fa-power-off"></i> Logout
+        <a href="../logout.php" class="nav-link text-danger ">
+          <i class="nav-icon fas fa-power-off"></i> Logout
         </a>
         
       </li>
